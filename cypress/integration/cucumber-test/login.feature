@@ -13,6 +13,9 @@ Feature: title
     Scenario: Valid login
         Given I open login page
         When I fill username with "username"
+        And I want to wait 1000 milliseconds
+        And I see "Zero" in the title
+        And I see "/login" in the url
         And I fill password with "password"
         And I submit login
         Then I should see homepage
