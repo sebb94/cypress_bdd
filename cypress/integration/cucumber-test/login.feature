@@ -1,4 +1,4 @@
-Feature: title
+Feature: Login
     As a valid user I want to login
     As a invalid user I do not want to login
 
