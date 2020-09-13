@@ -3,7 +3,9 @@ Feature: title
 
     Scenario: Valid login
         Given I open login page
-        When I submit login
+        When I fill username with "username"
+        And I fill password with "password"
+        And I submit login
         Then I should see homepage
     
     

@@ -6,10 +6,22 @@ Given('I open login page', () => {
     LoginPage.VisitLoginPage()
 });
 
+// When('I submit login', () => {
+//     LoginPage.fillUsername('username')
+//     LoginPage.fillPassword('password')
+//     LoginPage.submit()
+// });
+
+When('I fill username with {string}', (username) => {
+    LoginPage.fillUsername(username)
+});
+
+When('I fill password with {string}', (password) => {
+    LoginPage.fillPassword(password)
+});
+
 When('I submit login', () => {
-    LoginPage.fillUsername('username')
-    LoginPage.fillPassword('password')
-    LoginPage.submit()
+     LoginPage.submit()
 });
 
 Then('I should see homepage', () => {
