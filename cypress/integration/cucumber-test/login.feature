@@ -9,6 +9,7 @@ Feature: title
         And I submit login
         Then I should see error message
 
+    @focus
     Scenario: Valid login
         Given I open login page
         When I fill username with "username"
