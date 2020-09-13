@@ -6,11 +6,6 @@ Given('I open login page', () => {
     LoginPage.VisitLoginPage()
 });
 
-// When('I submit login', () => {
-//     LoginPage.fillUsername('username')
-//     LoginPage.fillPassword('password')
-//     LoginPage.submit()
-// });
 
 When('I fill username with {string}', (username) => {
     LoginPage.fillUsername(username)
@@ -26,4 +21,8 @@ When('I submit login', () => {
 
 Then('I should see homepage', () => {
     cy.get('#account_summary_tab').should('be.visible')
+});
+
+Then('I should see error message', () => {
+    LoginPage.shouldShowErrorMessage()
 });
