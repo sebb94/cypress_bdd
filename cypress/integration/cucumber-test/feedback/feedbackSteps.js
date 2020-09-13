@@ -1,7 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import FeedbackPage from './feedbackPage';
-import LoginPage from './feedbackPage'
-
 
 Given('I open login page', () => {
     FeedbackPage.VisitFeedbackPage()
@@ -26,7 +24,6 @@ When('I fill subject with {string}', (subject) => {
 When('I fill message with {string}', (message) => {
     FeedbackPage.fillMessage(message)
 });
-
 
 When('I submit feedback', () => {
      FeedbackPage.submit()
